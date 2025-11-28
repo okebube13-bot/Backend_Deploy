@@ -6,7 +6,7 @@ import { taskAssignedTemplate } from "../utils/emailTemplates.js";
 import {
   cloudinary,
   uploadToCloudinary,
-} from "../Middlewares/UploadMiddleware.js";
+} from "../middlewares/UploadMiddleware.js";
 
 // CREATE TASK
 export const createTask = async (req, res) => {
