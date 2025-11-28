@@ -13,11 +13,11 @@ import cookieParser from "cookie-parser";
 
 import connectDB from "./config/db.js";
 
-import authRoutes from "./routes/authRoutes.js";
-import userRoutes from "./routes/userRoutes.js";
-import taskRoutes from "./routes/taskRoutes.js";
-import testRoute from "./routes/testRoute.js";
-import Email from "./routes/Email.js";
+import authRoutes from "./routes_temp/authRoutes.js";
+import userRoutes from "./routes_temp/userRoutes.js";
+import taskRoutes from "./routes_temp/taskRoutes.js";
+import testRoute from "./routes_temp/testRoute.js";
+import Email from "./routes_temp/Email.js";
 
 dotenv.config();
 
