@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import Task from "../Models_temp/Task.js";
-import User from "../Models_temp/User.js";
+import Task from "../Models/Task.js";
+import User from "../Models/User.js";
 import sendEmail from "../utils/sendEmail.js";
 import { taskAssignedTemplate } from "../utils/emailTemplates.js";
 import {
