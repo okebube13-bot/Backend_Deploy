@@ -1,5 +1,3 @@
-// server.js
-
 import express from "express";
 import mongoose from "mongoose";
 
@@ -20,18 +18,14 @@ import userRoutes from "./routes/userRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import testRoute from "./routes/testRoute.js";
 import Email from "./routes/Email.js";
-// e("./middlewares/authMiddleware");
-// e("./middlewares/authorizeRoles");
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Allowed origins for frontend access
 const allowedOrigins = ["http://localhost:3000", "http://localhost:5173"];
 
-// Middleware
 app.use(morgan("dev"));
 app.use(
   cors({
@@ -47,7 +41,7 @@ app.use(helmet());
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("🚀 Task Management API is running...");
+  res.send("Task Management API is running...");
 });
 
 app.use("/api/auth", authRoutes);
