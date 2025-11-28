@@ -8,7 +8,7 @@ import {
   addFileToTask,
   deleteImageFromTask,
   deleteFileFromTask,
-} from "../Controller_temp/taskControllers.js";
+} from "../controller/taskControllers.js";
 import { protectRoute } from "../middlewares/authMiddleware.js";
 import { uploadImages, uploadFiles } from "../middlewares/UploadMiddleware.js";
 
