@@ -3,8 +3,8 @@ import {
   registerUser,
   loginUser,
   getMe,
-} from "../controllers/authController.js";
-import { protectRoute } from "../middlewares/authMiddleware.js";
+} from "../Controller/authController.js";
+import { protectRoute } from "../Middlewares/authMiddleware.js";
 
 const router = express.Router();
 

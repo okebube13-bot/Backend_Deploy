@@ -3,8 +3,8 @@ import {
   getAllUsers,
   getStaffUsers,
   getSingleUser,
-} from "../controllers/userController.js";
-import { protectRoute, managerOnly } from "../middlewares/authMiddleware.js";
+} from "../Controller/userController.js";
+import { protectRoute, managerOnly } from "../Middlewares/authMiddleware.js";
 
 const router = express.Router();
 

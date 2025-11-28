@@ -8,9 +8,9 @@ import {
   addFileToTask,
   deleteImageFromTask,
   deleteFileFromTask,
-} from "../controllers/taskControllers.js";
-import { protectRoute } from "../middlewares/authMiddleware.js";
-import { uploadImages, uploadFiles } from "../middlewares/UploadMiddleware.js";
+} from "../Controller/taskControllers.js";
+import { protectRoute } from "../Middlewares/authMiddleware.js";
+import { uploadImages, uploadFiles } from "../Middlewares/UploadMiddleware.js";
 
 const router = express.Router();
 

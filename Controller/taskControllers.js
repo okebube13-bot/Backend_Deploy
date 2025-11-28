@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
-import Task from "../models/Task.js";
-import User from "../models/User.js";
+import Task from "../Models/Task.js";
+import User from "../Models/User.js";
 import sendEmail from "../utils/sendEmail.js";
 import { taskAssignedTemplate } from "../utils/emailTemplates.js";
 import {
   cloudinary,
   uploadToCloudinary,
-} from "../middlewares/UploadMiddleware.js";
+} from "../Middlewares/UploadMiddleware.js";
 
 // CREATE TASK
 export const createTask = async (req, res) => {
