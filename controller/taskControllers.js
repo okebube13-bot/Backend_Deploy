@@ -44,7 +44,7 @@ export const createTask = async (req, res) => {
       return res.status(400).json({ message: "Invalid dueDate" });
     }
 
-    // ✅ Upload images to Cloudinary
+    // Upload images to Cloudinary
     const images = [];
     if (req.files?.images) {
       for (const file of req.files.images) {
@@ -60,7 +60,7 @@ export const createTask = async (req, res) => {
       }
     }
 
-    // ✅ Upload files to Cloudinary
+    //  Upload files to Cloudinary
     const files = [];
     if (req.files?.files) {
       for (const file of req.files.files) {
@@ -79,7 +79,7 @@ export const createTask = async (req, res) => {
       }
     }
 
-    // ✅ Create the task WITH images and files
+    //  Create the task WITH images and files
     const task = await Task.create({
       title,
       description,
@@ -91,7 +91,7 @@ export const createTask = async (req, res) => {
       files,
     });
 
-    // ✅ Send email
+    //  Send email
     await sendEmail({
       to: assignedUser.email,
       subject: "New Task Assigned",
@@ -251,7 +251,7 @@ export const addImageToTask = async (req, res) => {
       return res.status(400).json({ message: "No image uploaded" });
     }
 
-    // ✅ Upload to Cloudinary
+    //  Upload to Cloudinary
     const result = await uploadToCloudinary(
       req.file.buffer,
       "task-images",
@@ -300,7 +300,7 @@ export const addFileToTask = async (req, res) => {
       return res.status(400).json({ message: "No file uploaded" });
     }
 
-    // ✅ Upload to Cloudinary
+    //  Upload to Cloudinary
     const result = await uploadToCloudinary(
       req.file.buffer,
       "task-files",

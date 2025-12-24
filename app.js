@@ -25,11 +25,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:5173",
-  "https://frontend-deploy-mpdk.onrender.com",
-];
+const allowedOrigins = ["https://frontend-deploy-mpdk.onrender.com"];
 
 app.use(morgan("dev"));
 app.use(
