@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 // Send verification email
 const sendVerificationEmail = async (username, email) => {
   const verificationToken = generateVerificationToken();
-  const verificationUrl = `https://backend-deploy-3-4ofh.onrender.com/api/verify-email?token=${verificationToken}&email=${email}`;
+  const verificationUrl = `http://localhost:3000/verify-email?token=${verificationToken}&email=${email}`;
   const html = `<!doctype html>
     <html lang="en">
     <head>
