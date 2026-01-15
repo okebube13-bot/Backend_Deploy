@@ -5,7 +5,7 @@ export const authorizeRoles = (...allowedRoles) => {
     }
     if (!allowedRoles.includes(req.user.role)) {
       return res.status(400).json({
-        message: "Your statusis not up to per, you can't access this feature",
+        message: "Your status is not up to per, you can't access this feature",
       });
     } else {
       next();

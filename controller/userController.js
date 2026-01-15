@@ -19,3 +19,11 @@ export const getSingleUser = async (req, res) => {
 
   res.status(200).json({ user });
 };
+
+// Promote User
+export const promoteUser = async (req, res) => {
+  try {
+  } catch (err) {
+    res.status(400).json({ message: "Error promoting User" });
+  }
+};
